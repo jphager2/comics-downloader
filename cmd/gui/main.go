@@ -28,7 +28,7 @@ func main() {
 	w := app.NewWindow("Comics Downloader")
 
 	urlEntry := widget.NewEntry()
-	urlEntry.SetPlaceHolder("Comic URL or URLs separated by a commad")
+	urlEntry.SetPlaceHolder("Comic URL or URLs separated by a comma")
 
 	countryEntry := widget.NewEntry()
 	countryEntry.SetPlaceHolder("Country param used by mangarock")
