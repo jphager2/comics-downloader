@@ -3,6 +3,24 @@
 
 [[projects]]
   branch = "master"
+  digest = "1:3bdf681f50d10d938fdb6333147dfb0c449f393142384e26d92c468eaf4d860f"
+  name = "fyne.io/fyne"
+  packages = [
+    ".",
+    "app",
+    "canvas",
+    "driver/desktop",
+    "driver/gl",
+    "layout",
+    "test",
+    "theme",
+    "widget",
+  ]
+  pruneopts = "UT"
+  revision = "37e6e76a56470ca4a27be5a2e9dda532319a5413"
+
+[[projects]]
+  branch = "master"
   digest = "1:2affba56bda4a63c0eee702a03497aa224e798b4cd26efa46b3a41d5c36646df"
   name = "github.com/BakeRolls/mri"
   packages = ["."]
@@ -65,12 +83,40 @@
   version = "v1.4.7"
 
 [[projects]]
+  branch = "master"
+  digest = "1:cee81b7762814c29e7f289c79d158b79bc0743d67391c9d0f9a56c7bab18c376"
+  name = "github.com/go-gl/gl"
+  packages = ["v3.2-core/gl"]
+  pruneopts = "UT"
+  revision = "bf2b1f2f34d7f6a60a99a830f65dcd6afb0c6587"
+
+[[projects]]
+  branch = "master"
+  digest = "1:4a56a109a6185707d4d820f5188404f9cc1bdecb7b4a905d4edfd91d4137ebdc"
+  name = "github.com/go-gl/glfw"
+  packages = ["v3.2/glfw"]
+  pruneopts = "UT"
+  revision = "e6da0acd62b1b57ee2799d4d0a76a7d4514dc5bc"
+
+[[projects]]
   digest = "1:bed9d72d596f94e65fff37f4d6c01398074a6bb1c3f3ceff963516bd01db6ff5"
   name = "github.com/gofrs/uuid"
   packages = ["."]
   pruneopts = "UT"
   revision = "6b08a5c5172ba18946672b49749cde22873dd7c2"
   version = "v3.2.0"
+
+[[projects]]
+  branch = "master"
+  digest = "1:4d25b31d29d28b1eefb703bf15cb630a57aa2c3c613bbed6ca12f204fe3cf7dd"
+  name = "github.com/goki/freetype"
+  packages = [
+    ".",
+    "raster",
+    "truetype",
+  ]
+  pruneopts = "UT"
+  revision = "fa8a33aabaff00cee178fe14212e0a308a87ea5d"
 
 [[projects]]
   digest = "1:e4f5819333ac698d294fe04dbf640f84719658d5c7ce195b10060cc37292ce79"
@@ -100,12 +146,12 @@
   version = "v1.0.0"
 
 [[projects]]
-  digest = "1:20011645d7e842fd4dbadc6bb4cb60956c0de9c8814923bb6149c6e4081ce1d4"
+  digest = "1:a61dd5f0dcdb59fd72340303085be591bfddda33bf1d73548719c18f43efba86"
   name = "github.com/jung-kurt/gofpdf"
   packages = ["."]
   pruneopts = "UT"
-  revision = "70a9e1699f5ab939c2306961cf80517e19885a92"
-  version = "v2.1.4"
+  revision = "06680dfb10b4a6b0eb7054a2204250666a935a8e"
+  version = "v2.3.1"
 
 [[projects]]
   digest = "1:31e761d97c76151dde79e9d28964a812c46efc5baee4085b86f68f0c654450de"
@@ -164,15 +210,15 @@
   version = "v1.3.0"
 
 [[projects]]
-  digest = "1:d886a3c32c8c1a770d07e36340f061d3afc948d065ffc3c9a19b01b34d4f0b65"
+  digest = "1:cf9272ab0a637cb1ffa40e2b6220108d7016a36b3eb357e4b57aacb7a8f725c0"
   name = "github.com/pierrec/lz4"
   packages = [
     ".",
     "internal/xxh32",
   ]
   pruneopts = "UT"
-  revision = "315a67e90e415bcdaff33057da191569bf4d8479"
-  version = "v2.1.1"
+  revision = "9419d2361c8ae111073ffe3337ecc364fb590921"
+  version = "v2.1.2"
 
 [[projects]]
   digest = "1:cf31692c14422fa27c83a05292eb5cbe0fb2775972e8f1f8446a71549bd8980b"
@@ -191,12 +237,12 @@
   version = "v1.0.0"
 
 [[projects]]
-  digest = "1:d7aee6810f676ba84c2e77559b27352c8ecd0a2e803d4a30578445202caf5d6e"
+  digest = "1:f7a6bde8f1fba960ecd0d54fda6eda01cef70f8c5d886d490c59ef9b33d879f3"
   name = "github.com/schollz/progressbar"
   packages = ["."]
   pruneopts = "UT"
-  revision = "a77c9589c5cb6769d5c3d08ee2a39aa62bf69a16"
-  version = "v2.11.0"
+  revision = "0033c1b96c20c4b698d2200719507abe04b3b77a"
+  version = "v2.12.0"
 
 [[projects]]
   digest = "1:fd61cf4ae1953d55df708acb6b91492d538f49c305b364a014049914495db426"
@@ -250,6 +296,22 @@
   version = "v1.3.2"
 
 [[projects]]
+  branch = "master"
+  digest = "1:9fafe5482d9b40c49b686399c1db4f842ab9049479bf527a8c15f28d84ce8008"
+  name = "github.com/srwiley/oksvg"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "c520f0a6c5ccb7ec7e11abc378c3372b90983860"
+
+[[projects]]
+  branch = "master"
+  digest = "1:5e4fa1626c1b2369d7b4850feb1027df278d0e0bf0684f3794015ca7ba0c1185"
+  name = "github.com/srwiley/rasterx"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "696f7edb7a7e4e799b36c09994a73877d92b9637"
+
+[[projects]]
   digest = "1:972c2427413d41a1e06ca4897e8528e5a1622894050e2f527b38ddf0f343f759"
   name = "github.com/stretchr/testify"
   packages = ["assert"]
@@ -280,43 +342,62 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:e07483c90d27239c7121fb733d0a6c42ab229f67ecf0c2edcceb13ef1599d8a5"
+  digest = "1:2eee26f9014b014983006ef8d67b38fae8efde177878278e72eb3794fc25617a"
   name = "golang.org/x/image"
   packages = [
+    "colornames",
+    "font",
+    "math/fixed",
     "riff",
+    "vector",
     "vp8",
     "vp8l",
     "webp",
   ]
   pruneopts = "UT"
-  revision = "3fc05d484e9f77dd51816890e05f2602e4ca4d65"
+  revision = "4e30a6eb7d9a7fbd8f97e1d47806f810d86cfc6e"
 
 [[projects]]
   branch = "master"
-  digest = "1:81e1a7dd1ab100e3ac0ad948e844959a0ebb225ad22849ccfa028503da17caed"
+  digest = "1:d5d8006ff2f825ddeac50550bbe002464b1f85810666e700a68459e91e2f875f"
   name = "golang.org/x/net"
   packages = [
     "html",
     "html/atom",
+    "html/charset",
   ]
   pruneopts = "UT"
-  revision = "eb5bcb51f2a31c7d5141d810b70815c05d9c9146"
+  revision = "1da14a5a36f220ea3f03470682b737b1dfd5de22"
 
 [[projects]]
   branch = "master"
-  digest = "1:cf353a5a9ffb2d6f850e9c773e25388a425a70c270546480427ed069e87b136a"
+  digest = "1:28d862f4f9bf2d1976d1d320481bff661b7565eb876d4df2a981f79e7f40e4cd"
   name = "golang.org/x/sys"
   packages = ["unix"]
   pruneopts = "UT"
-  revision = "4b34438f7a67ee5f45cc6132e2bad873a20324e9"
+  revision = "12500544f89f9420afe9529ba8940bf72d294972"
 
 [[projects]]
-  digest = "1:8029e9743749d4be5bc9f7d42ea1659471767860f0cdc34d37c3111bd308a295"
+  digest = "1:4392fcf42d5cf0e3ff78c96b2acf8223d49e4fdc53eb77c99d2f8dfe4680e006"
   name = "golang.org/x/text"
   packages = [
+    "encoding",
+    "encoding/charmap",
+    "encoding/htmlindex",
+    "encoding/internal",
+    "encoding/internal/identifier",
+    "encoding/japanese",
+    "encoding/korean",
+    "encoding/simplifiedchinese",
+    "encoding/traditionalchinese",
+    "encoding/unicode",
     "internal/gen",
+    "internal/tag",
     "internal/triegen",
     "internal/ucd",
+    "internal/utf8internal",
+    "language",
+    "runes",
     "transform",
     "unicode/cldr",
     "unicode/norm",
@@ -337,6 +418,8 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "fyne.io/fyne/app",
+    "fyne.io/fyne/widget",
     "github.com/BakeRolls/mri",
     "github.com/Girbons/mangarock",
     "github.com/anaskhan96/soup",

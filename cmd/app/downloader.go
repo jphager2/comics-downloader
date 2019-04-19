@@ -15,7 +15,7 @@ func init() {
 }
 
 // Run will run the downloader app
-func Run(link, format, country string) {
+func Run(link, country, format string) {
 	conf := new(config.ComicConfig)
 	if err := conf.LoadConfig(); err != nil {
 		log.Warning(err)
