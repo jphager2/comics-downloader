@@ -3,31 +3,22 @@ help:                              # this command
 	@egrep '^[A-Za-z0-9_-]+:' Makefile
 
 osx-build: # Create the executable for OSX
-	@GOOS=darwin GOARCH=amd64 go build -o builds/comics-downloader-osx ./cmd/app/
+	@GOOS=darwin GOARCH=amd64 go build -o build/comics-downloader-osx ./cmd/app/
 
 windows-build: # Create the executable for WINDOWS
-	@GOOS=windows GOARCH=amd64 go build -o builds/comics-downloader.exe ./cmd/app/
+	@GOOS=windows GOARCH=amd64 go build -o build/comics-downloader.exe ./cmd/app/
 
 linux-build: # Create the executable for LINUX
-	@GOOS=linux GOARCH=amd64 go build -o builds/comics-downloader ./cmd/app/
+	@GOOS=linux GOARCH=amd64 go build -o build/comics-downloader ./cmd/app/
 
-osx-gui-build: # Create the executable for OSX with GUI
-	@CGO_ENABLED=1 GOOS=darwin GOARCH=amd64 go build -o builds/gui-comics-downloader-osx ./cmd/gui/
-
-windows-gui-build: # Create the executable for WINDOWS with GUI
-	@CGO_ENABLED=1 GOOS=windows GOARCH=amd64 go build -o builds/gui-comics-downloader.exe ./cmd/gui/
-
-linux-gui-build: # Create the executable for LINUX with GUI
-	@CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o builds/gui-comics-downloader ./cmd/gui/
-
+gui-builds:
+	fyne-cross --output comics-downloader-gui --targets=linux/amd64,windows/amd64,darwin/amd64 ./cmd/gui
 
 builds: # Create the executables for OSX/Windows/Linux
 	@make osx-build
 	@make windows-build
 	@make linux-build
-	@make osx-gui-build
-	@make windows-gui-build
-	@make linux-gui-build
+	@make gui-builds
 
 remove-builds: # Remove executables
-	@rm -rf builds/
+	@rm -rf build/
