@@ -2,11 +2,14 @@ package core
 
 import (
 	"bytes"
+	"errors"
 	"fmt"
 	"io"
 	"io/ioutil"
 	"net/http"
 	"os"
+	"path"
+	"runtime"
 	"strings"
 
 	"github.com/BakeRolls/mri"
@@ -101,9 +104,20 @@ func (comic *Comic) makeEPUB() error {
 	// used to check if the epub cover already exists
 	isCoverSet := false
 	// used to add the image in the epub section
-	imgTag := `<img src="%s" alt="Cover Image" />`
+	imgTag := `<img class="page" src="%s" alt="Cover Image" />`
+	// get path to css file
+	_, filename, _, ok := runtime.Caller(1)
+	if !ok {
+		return errors.New("Couldn't get current filename")
+	}
+	cssPath := path.Join(path.Dir(filename), "../../epub/book.css")
 	// setup a new Epub instance
 	e := epub.NewEpub(comic.IssueNumber)
+	// add css file
+	bookCSS, err := e.AddCSS(cssPath, "book.css")
+	if err != nil {
+		return err
+	}
 	// set Epub title
 	e.SetTitle(fmt.Sprintf("%s-%s", comic.Name, comic.IssueNumber))
 	// check if the author exists for this comic
@@ -158,7 +172,7 @@ func (comic *Comic) makeEPUB() error {
 				isCoverSet = true
 				e.SetCover(imgpath, "")
 			} else {
-				_, err = e.AddSection(fmt.Sprintf(imgTag, imgpath), "", "", "")
+				_, err = e.AddSection(fmt.Sprintf(imgTag, imgpath), "", "", bookCSS)
 				if err != nil {
 					log.Error(err)
 				}
